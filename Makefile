@@ -1,14 +1,14 @@
 start:
 	@echo "Starting app..."
-	@docker-compose up --build -d
+	@docker compose up app --build -d
 
 stop:
 	@echo "Stopping app..."
-	@docker-compose down
+	@docker compose down
 
 watch: start
 	@echo "Watching for file changes..."
-	@docker-compose watch
+	@docker compose watch app
 
 logs: 
-	@docker-compose logs -f
+	@docker compose logs -f
